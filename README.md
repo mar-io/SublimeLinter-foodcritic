@@ -40,7 +40,7 @@ To install via Package Control, do the following:
 ## Settings
 For general information on how SublimeLinter works with settings, please see [Settings][settings]. For information on generic linter settings, please see [Linter Settings][linter-settings].
 
-The only rules that are excluded by default is FC011,FC031,FC045. The reason these rules are excluded is that they match the cookbook name with metadata files within the cookbook structure. This was out of my scope. I simply want to lint the actual cookbook file. However, I am open to  pull requests.
+The only rules that are excluded by default is FC011,FC031,FC033,FC045. The reason these rules are excluded is that they match file names with metadata/template files within the cookbook structure. This was out of my scope. I simply want to lint the actual cookbook file. However, I am open to pull requests.
 
 Foodcritic should still be used as part of your CI process to ensure the metadata files of your cookbook are properly annotated.
 
