@@ -1,7 +1,7 @@
 SublimeLinter-contrib-foodcritic
 ================================
 
-[![Build Status](https://travis-ci.org/SublimeLinter/SublimeLinter-contrib-foodcritic.svg?branch=master)](https://travis-ci.org/SublimeLinter/SublimeLinter-contrib-foodcritic)
+[![Build Status](https://travis-ci.org/badmadrad/SublimeLinter-foodcritic.svg?branch=master)](https://travis-ci.org/SublimeLinter/SublimeLinter-contrib-foodcritic)
 
 This linter plugin for [SublimeLinter][docs] provides an interface to [foodcritic](http://acrmp.github.io/foodcritic/). It will be used with files that have the “ruby” syntax.
 
