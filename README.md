@@ -3,7 +3,7 @@ SublimeLinter-contrib-foodcritic
 
 [![Build Status](https://travis-ci.org/SublimeLinter/SublimeLinter-contrib-foodcritic.svg?branch=master)](https://travis-ci.org/SublimeLinter/SublimeLinter-contrib-foodcritic)
 
-This linter plugin for [SublimeLinter][docs] provides an interface to [foodcritic](__linter_homepage__). It will be used with files that have the “__syntax__” syntax.
+This linter plugin for [SublimeLinter][docs] provides an interface to [foodcritic](http://acrmp.github.io/foodcritic/). It will be used with files that have the “ruby” syntax.
 
 ## Installation
 SublimeLinter 3 must be installed in order to use this plugin. If SublimeLinter 3 is not installed, please follow the instructions [here][installation].
@@ -40,12 +40,10 @@ To install via Package Control, do the following:
 ## Settings
 For general information on how SublimeLinter works with settings, please see [Settings][settings]. For information on generic linter settings, please see [Linter Settings][linter-settings].
 
-In addition to the standard SublimeLinter settings, SublimeLinter-contrib-foodcritic provides its own settings. Those marked as “Inline Setting” or “Inline Override” may also be [used inline][inline-settings].
+The only rules that are excluded by default is FC011,FC031,FC045. The reason these rules are excluded is that they match the cookbook name with metadata files within the cookbook structure. This was out of my scope. I simply want to lint the actual cookbook file. However, I am open to  pull requests.
 
-|Setting|Description|Inline Setting|Inline Override|
-|:------|:----------|:------------:|:-------------:|
-|foo|Something.|&#10003;| |
-|bar|Something else.| |&#10003;|
+Foodcritic should still be used as part of your CI process to ensure the metadata files of your cookbook are properly annotated.
+
 
 ## Contributing
 If you would like to contribute enhancements or fixes, please do the following:

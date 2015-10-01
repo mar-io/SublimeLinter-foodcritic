@@ -10,23 +10,24 @@
 
 """This module exports the Foodcritic plugin class."""
 
-from SublimeLinter.lint import RubyLinter, util
+from SublimeLinter.lint import RubyLinter, highlight, util
 
 
 class Foodcritic(RubyLinter):
 
     """Provides an interface to foodcritic."""
 
-    syntax = ''
-    cmd = 'foodcritic'
+    syntax = ('ruby', 'chef')
+    cmd = ('foodcritic', '-t', '~FC011', '-t', '~FC031', '-t', '~FC045', '@')
     executable = None
     version_args = '--version'
     version_re = r'(?P<version>\d+\.\d+\.\d+)'
-    version_requirement = '>= 1.0'
-    regex = r''
+    version_requirement = '>= 2.2.0'
+    regex = r'(?P<message>FC\d+: .+): (?P<file>.+):(?P<line>.+)'
+    default_type = highlight.WARNING
     multiline = False
     line_col_base = (1, 1)
-    tempfile_suffix = None
+    tempfile_suffix = 'rb'
     error_stream = util.STREAM_BOTH
     selectors = {}
     word_re = None
