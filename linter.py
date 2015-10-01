@@ -35,4 +35,3 @@ class Foodcritic(RubyLinter):
     inline_settings = None
     inline_overrides = None
     comment_re = r'\s*#'
-
