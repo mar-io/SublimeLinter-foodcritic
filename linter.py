@@ -15,7 +15,7 @@ from SublimeLinter.lint import RubyLinter, highlight, util
 
 class Foodcritic(RubyLinter):
     """Provides an interface to foodcritic."""
-    
+
     syntax = 'ruby'
     cmd = ('foodcritic', '-t', '~FC011', '-t', '~FC031', '-t', '~FC033', '-t', '~FC045', '@')
     executable = 'ruby'
