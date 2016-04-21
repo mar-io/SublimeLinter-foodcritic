@@ -19,8 +19,8 @@ class Foodcritic(RubyLinter):
 
     syntax = 'ruby'
     cmd = ('foodcritic', '-t', '~FC011', '-t', '~FC031', '-t', '~FC033', '-t', '~FC045', '@')
-    executable = None
-    version_args = '--version'
+    executable = 'ruby'
+    version_args = '-S foodcritic --version'
     version_re = r'(?P<version>\d+\.\d+\.\d+)'
     version_requirement = '>= 2.2.0'
     regex = r'(?P<message>FC\d+: .+): (?P<file>.+):(?P<line>.+)'
