@@ -17,7 +17,7 @@ class Foodcritic(RubyLinter):
     """Provides an interface to foodcritic."""
 
     syntax = 'ruby'
-    cmd = ('foodcritic', '-t', '~FC011', '-t', '~FC031', '-t', '~FC033', '-t', '~FC045', '@')
+    cmd = ('ruby', '-S', 'foodcritic', '-t', '~FC011', '-t', '~FC031', '-t', '~FC033', '-t', '~FC045', '@')
     executable = 'ruby'
     version_args = '-S foodcritic --version'
     version_re = r'(?P<version>\d+\.\d+\.\d+)'
